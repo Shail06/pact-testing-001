@@ -11,7 +11,7 @@
     <description>Demo project for Spring Boot</description>
     <modules>
         <module>spring-boot-bus-app</module>
-        <module>Client</module>
+        <module>bus-client</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
