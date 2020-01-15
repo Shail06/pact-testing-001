@@ -22,7 +22,7 @@ public class BusArrival {
         System.out.println("ETA = "+eta);
     }
 
-    private Integer checkEta(String station, String nr) {
+    public Integer checkEta(String station, String nr) {
         try{
             String url = String.format("http://localhost:%d/bus/%s/%s", port, station, nr);
             System.out.println("URL: "+url);
