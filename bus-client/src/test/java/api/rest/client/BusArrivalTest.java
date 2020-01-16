@@ -8,11 +8,9 @@ import au.com.dius.pact.consumer.dsl.PactDslJsonBody;
 import au.com.dius.pact.consumer.dsl.PactDslWithProvider;
 import au.com.dius.pact.model.RequestResponsePact;
 
-import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
-
 
 import java.util.HashMap;
 import java.util.Map;
@@ -42,10 +40,13 @@ public class BusArrivalTest {
                 .body(etaResults).toPact();
     }
 
+    /**
+     * Represents the test with Mock Provider
+     */
     @Test
     @PactVerification
     public void busArrivalTest(){
-        System.setProperty("pact.RootDir", "../pacts");
+        System.setProperty("pact.RootDir", "target/pacts"); // This statement somehow doesn't work!
         Integer eta = new BusArrival(provider.getPort()).checkEta("Connoly", "14");
         System.out.println("TEST ETA = "+ eta);
         assertTrue(eta >= 0 );
