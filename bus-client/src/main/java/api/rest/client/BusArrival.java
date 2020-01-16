@@ -17,6 +17,10 @@ public class BusArrival {
         System.out.println("Custom port "+port);
     }
 
+    /**
+     * Represent the test for Real API
+     * @param args
+     */
     public static void main(String[] args) {
         Integer eta = new BusArrival().checkEta("Connoly", "50");
         System.out.println("ETA = "+eta);
